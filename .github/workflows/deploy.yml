@@ -5,14 +5,16 @@ on:
     branches: [ "master" ]
 
 jobs:
-  deploy:
+  web-deploy:
     name: Deploy
     runs-on: ubuntu-latest
     steps:
+
     - name: Get Latest Code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
+
     - name: Sync Files
-      uses: SamKirkland/FTP-Deploy-Action@4.1.0
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
         server: ftp.magnapartner.com
         username: ${{ secrets.CICD_EMAIL}}
