@@ -16,7 +16,7 @@ jobs:
     - name: Sync Files
       uses: SamKirkland/web-deploy@v1
       with:
-        target-server: ftp.magnapartner.com
+        target-server: magnapartner.com
         remote-user: ${{ secrets.CICD_EMAIL }}
         private-ssh-key: ${{ secrets.SSH_KEY }}
         destination-path: /
