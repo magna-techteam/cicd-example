@@ -16,7 +16,7 @@ jobs:
     - name: Sync Files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        server: ftp.magnapartner.com
-        username: ${{ secrets.CICD_EMAIL }}
-        password: ${{ secrets.CICD_PASSWORD }}
-        server-dir: /
+        target-server: ftp.magnapartner.com
+        remote-user: ${{ secrets.CICD_EMAIL }}
+        private-ssh-key: ${{ secrets.SSH_KEY }}
+        destination-path: /
